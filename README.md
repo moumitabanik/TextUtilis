@@ -1,6 +1,6 @@
 # TextUtilis
 
-TextUtilis is a web application designed to perform various text manipulation tasks. It provides features to enhance and transform text such as converting cases, removing extra spaces, and counting words and characters. The website is built using JavaScript and offers a simple and intuitive interface.
+TextUtilis is a web application built in React Js designed to perform various text manipulation tasks. It provides features to enhance and transform text such as converting cases, removing extra spaces, and counting words and characters. The website is built using JavaScript and offers a simple and intuitive interface.
 
 ## Features
 
@@ -21,6 +21,7 @@ You can access TextUtilis directly via the [website](https://moumitabanik.github
 
 ## Technologies Used
 
+- React JS
 - HTML5
 - CSS3
 - Bootstrap
