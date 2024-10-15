@@ -41,17 +41,17 @@ export default function TextForm(props) {
                 <textarea className="form-control" id="myBox" style={{backgroundColor: props.mode === 'dark' ? 'grey':'white',color: props.mode === 'dark' ? 'white':'black'}} rows="8" value={text} onChange={handleOnChange}></textarea>
             </div>
             <div>
-                <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
-                <button className="btn btn-primary mx-2" onClick={handleLowClick}>Convert to Lowercase</button>
-                <button className="btn btn-primary mx-2" onClick={handleClearText}>Clear</button>
-                <button className="btn btn-primary mx-2" onClick={handleCopyClick}>Copy</button>
-                <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+                <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>Convert to Uppercase</button>
+                <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>Convert to Lowercase</button>
+                <button className="btn btn-primary mx-2 my-2" onClick={handleClearText}>Clear</button>
+                <button className="btn btn-primary mx-2 my-2" onClick={handleCopyClick}>Copy</button>
+                <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
             </div>
         </div>
         <div className="container my-2"  style={{color: props.mode === 'dark' ? 'white':'black'}}>
             <h1>Your Text Summery</h1>
-            <p>{text.split(" ").filter(word => word.trim() !== "").length} words, {text.length} Characters</p>
-            <p>{0.008*text.split(" ").length} Minutes read</p>
+            <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words, {text.length} Characters</p>
+            <p>{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes read</p>
             <h2>Preview</h2>
             <p>{text.length>0?text:"Enter something in the above to preview it here"}</p>
         </div>
